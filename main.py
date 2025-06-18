@@ -1,4 +1,5 @@
 import os, time, string, random, shutil
+from tqdm import tqdm
 
 # define the paths
 CDIR = os.path.abspath(os.path.dirname(__file__))
@@ -46,7 +47,8 @@ def main():
     args = get_args()
 
     # here you would typically set up your experiment
-    time.sleep(60*30)  # simulate some setup time
+    for _ in tqdm(range(60*30)):
+        time.sleep(1)  # simulate some setup time
 
     # here we will simply write the arguments to a file
     args_file = os.path.join(args.experiment_name, 'args.txt')

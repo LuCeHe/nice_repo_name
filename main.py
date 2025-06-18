@@ -46,6 +46,7 @@ def main():
     args = get_args()
 
     # here you would typically set up your experiment
+    time.sleep(60*30)  # simulate some setup time
 
     # here we will simply write the arguments to a file
     args_file = os.path.join(args.experiment_name, 'args.txt')
